@@ -55,7 +55,7 @@
     <div class="mt-20">
         <div class="lg:px-32 lg:flex lg:justify-between">
 
-            <div class="hover:shadow-2xl bg-white rounded-lg shadow mx-12 max-w-6xl">
+            <div class="hover:shadow-2xl bg-white rounded-lg shadow mx-12 max-w-6xl mt-8">
                 <img class="rounded-t-lg" src="/img/p1.jpg" alt="">
                 <div class="p-5">
                     <h2 class="text-brand text-3xl text-gray-800 uppercase">AccuFrame.com</h2>
@@ -63,7 +63,7 @@
                 </div>
             </div>
 
-            <div class="hover:shadow-2xl bg-white rounded-lg shadow mx-12 max-w-6xl">
+            <div class="hover:shadow-2xl bg-white rounded-lg shadow mx-12 max-w-6xl mt-8">
                 <img class="rounded-t-lg" src="/img/p2.png" alt="">
                 <div class="p-5">
                     <h2 class="text-brand text-3xl text-gray-800 uppercase">TheLuigi.com</h2>

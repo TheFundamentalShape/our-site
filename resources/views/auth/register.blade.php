@@ -2,7 +2,7 @@
 
 @section('title')
     Register
-    @endsection
+@endsection
 
 @section('content')
     <div class="lg:pl-40 pl-12 mb-10">
