@@ -11,7 +11,7 @@
 
                 <h1 class="pt-12 text-gray-800 text-4xl lg:text-6xl text-brand">We are<br>The Fundamental Shape</h1>
                 <h3 class="mt-8 text-gray-800 text-4xl text-brand">and we build pretty<br>websites.</h3>
-                <a class="bg-cool-green inline-block mt-8 px-8 py-4 text-2xl text-white hover:text-cool-green hover:bg-white text-brand rounded shadow-lg">Register your business today!</a>
+                <a href="{{ route('register') }}" class="bg-cool-green inline-block mt-8 px-8 py-4 text-2xl text-white hover:text-cool-green hover:bg-white text-brand rounded shadow-lg">Register your business today!</a>
 
                 <div class="absolute pt-8 lg:pt-0 right-0">
                     <img src="/img/cactus.png">
@@ -81,7 +81,7 @@
     <div class="bg-gray-800">
         <div class="p-8 flex justify-center">
             <h1 class="text-brand text-white text-2xl px-3">Existing Customer?</h1>
-            <a class="inline-block text-brand bg-brand-pink hover:bg-white hover:text-brand-pink text-white rounded px-8 py-2">Login</a>
+            <a href="{{ route('login') }}" class="inline-block text-brand bg-brand-pink hover:bg-white hover:text-brand-pink text-white rounded px-8 py-2">Login</a>
         </div>
     </div>
 

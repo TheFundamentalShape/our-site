@@ -1866,11 +1866,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    console.log('Component mounted.');
-  }
-});
+/* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
 
@@ -37153,11 +37149,20 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "bg-gray-800 p-4 nav-heading" }, [
-      _c("h1", { staticClass: "lg:text-4xl text-3xl text-center text-white" }, [
-        _vm._v("The Fundamental Shape")
-      ])
-    ])
+    return _c(
+      "div",
+      { staticClass: "bg-gray-800 p-4 nav-heading flex justify-center" },
+      [
+        _c(
+          "a",
+          {
+            staticClass: "inline-block lg:text-4xl text-3xl text-white",
+            attrs: { href: "/" }
+          },
+          [_vm._v("The Fundamental Shape")]
+        )
+      ]
+    )
   }
 ]
 render._withStripped = true
