@@ -3,7 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Company;
+
 use App\Http\Controllers\Controller;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -41,6 +45,36 @@ class RegisterController extends Controller
     }
 
     /**
+     * Handle a registration request for the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function register(Request $request)
+    {
+        // get the reCAPTCHA token and post it to the Google API for validation (only active for 2 mins)
+
+        // all of our data needed to submit to the API
+        $token = $request['g-recaptcha-response'];
+        $secret = env('GOOGLE_RECAPTCHA_SECRET');
+
+        $response = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=" . $secret . "&response=" . $token), true);
+
+        if($response['success'] == false) {
+            return back()->with('recaptcha-error', 'You must be a robot... Please try again or reach out to us by email.');
+        }
+
+        $this->validator($request->all())->validate();
+
+        event(new Registered($user = $this->create($request->all())));
+
+        $this->guard()->login($user);
+
+        return $this->registered($request, $user)
+            ?: redirect($this->redirectPath());
+    }
+
+    /**
      * Get a validator for an incoming registration request.
      *
      * @param  array  $data
@@ -49,9 +83,12 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:6|confirmed',
+            'company' => 'required|string',
+            'domain' => 'required|string|unique:companies',
+            'phone' => 'required',
         ]);
     }
 
@@ -63,10 +100,17 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $company = Company::create([
+            'name' => $data['company'],
+            'domain' => $data['domain']
+        ]);
+
         return User::create([
+            'company_id' => $company->id,
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'phone' => $data['phone'],
+            'password' => Hash::make($data['password'])
         ]);
     }
 }

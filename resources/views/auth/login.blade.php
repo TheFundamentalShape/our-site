@@ -6,21 +6,28 @@
 
 @section('content')
 
-    <div class="lg:pl-40 pl-12">
+    <div class="lg:px-56 px-12">
 
         <form action="/login" method="post">
 
             @csrf
 
             @if ($errors->any())
-                <div class="bg-red-600 p-8 mt-20 mr-8 rounded shadow-md">
-                    <h1 class="text-brand text-white text-4xl">Hmm... That's just not right. 🤔</h1>
-                    <p class="text-white text-lg text-paragraph">The answers you gave us have caused our system to throw an exception. Much like how you throw a fit when you're upset, our system throws these things called exceptions when it's upset. Our system works best when it's happy and healthy (no exceptions thrown!) Here's what's making the system upset, try fixing your answers:</p>
-                    <ul class="pt-6 pl-8">
-                        @foreach ($errors->all() as $error)
-                            <li class="text-white text-paragraph text-md">- {{ $error }}</li>
-                        @endforeach
-                    </ul>
+                <div class="bg-red-600 p-8 mt-20 mr-8 rounded shadow-2xl">
+                    <div class="lg:flex">
+                        <div class="lg:mr-8 lg:mb-0 mb-8">
+                            <img class="rounded" src="/img/uhyeah.gif" alt="Wrong.">
+                        </div>
+                        <div>
+                            <h1 class="text-brand text-white text-4xl">Uh, yeah. That's just not right. 🤔</h1>
+                            <p class="text-white text-lg text-paragraph">A couple of things just went wonky behing the scenes. Here's what's up:</p>
+                            <ul class="pt-6 pl-8">
+                                @foreach ($errors->all() as $error)
+                                    <li class="text-white text-paragraph text-md">- {{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             @endif
 
@@ -31,7 +38,7 @@
                 <label class="text-paragraph text-gray-800 font-bold">
                     What's your email address?
                 </label>
-                <input type="email" name="email" placeholder="hi@fundamentalshape.com" class="w-full mt-2 bg-white rounded py-3 px-4 text-paragraph shadow-md">
+                <input type="email" name="email" placeholder="dwight@schrute-farms.org" class="w-full mt-2 bg-white rounded py-3 px-4 text-paragraph shadow-md">
             </div>
 
             <div class="pt-8 pr-8">

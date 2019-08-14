@@ -6,16 +6,17 @@
 
 @section('content')
     <div class="bg-brand-pink">
-        <div class="hero pb-64">
+        <div class="hero bg-cover pb-64">
             <div class="ml-12 lg:ml-32 relative">
 
-                <h1 class="pt-12 text-gray-800 text-4xl lg:text-6xl text-brand">We are<br>The Fundamental Shape</h1>
-                <h3 class="mt-8 text-gray-800 text-4xl text-brand">and we build pretty<br>websites.</h3>
+                <h1 class="pt-12 text-4xl md:text-6xl text-gray-800 text-brand">We're<br>The Fundamental Shape</h1>
+                <h3 class="mt-1 text-2xl md:text-3xl text-gray-800 text-brand">and we build pretty websites.</h3>
                 <a href="{{ route('register') }}" class="bg-cool-green inline-block mt-8 px-8 py-4 text-2xl text-white hover:text-cool-green hover:bg-white text-brand rounded shadow-lg">Register your business today!</a>
 
                 <div class="absolute pt-8 lg:pt-0 right-0">
                     <img src="/img/cactus.png">
                 </div>
+                
 
             </div>
         </div>
@@ -38,7 +39,7 @@
         </div>
     </div>
 
-    <div class="mt-20 p-10 flex justify-center">
+    <div class="mt-20 p-10 flex justify-center static">
         <div>
             <h2 class="text-brand text-center text-3xl lg:text-5xl text-gray-800 px-16">We’re here for you.
                 Every step of the way.</h2>
@@ -47,7 +48,7 @@
     </div>
 
     <div class="mt-20 bg-cool-green">
-        <div class="hero px-12 py-64">
+        <div class="hero-2 bg-cover px-12 py-64">
             <h2 class="text-brand text-brand-pink lg:text-center text-6xl text-gray-800">Checkout what we've built.</h2>
         </div>
     </div>
@@ -55,21 +56,25 @@
     <div class="mt-20">
         <div class="lg:px-32 lg:flex lg:justify-between">
 
-            <div class="hover:shadow-2xl bg-white rounded-lg shadow mx-12 max-w-6xl mt-8">
-                <img class="rounded-t-lg" src="/img/p1.jpg" alt="">
-                <div class="p-5">
-                    <h2 class="text-brand text-3xl text-gray-800 uppercase">AccuFrame.com</h2>
-                    <p class="text-paragraph text-gray-500 text-2xl mt-4">AccuFrame® Energy Seal is a new economical innovation designed to help provide a solution to the increased energy efficiency demands required in new home construction.</p>
+            <a href="http://accuframe.com" target="_blank">
+                <div class="hover:shadow-2xl bg-white rounded-lg shadow mx-12 max-w-6xl mt-8 min-h-full">
+                    <img class="rounded-t-lg" src="/img/p1.jpg" alt="">
+                    <div class="p-5">
+                        <h2 class="text-brand text-3xl text-gray-800 uppercase">AccuFrame.com</h2>
+                        <p class="text-paragraph text-gray-500 text-2xl mt-4">AccuFrame® Energy Seal is a new economical innovation designed to help provide a solution to the increased energy efficiency demands required in new home construction.</p>
+                    </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="hover:shadow-2xl bg-white rounded-lg shadow mx-12 max-w-6xl mt-8">
-                <img class="rounded-t-lg" src="/img/p2.png" alt="">
-                <div class="p-5">
-                    <h2 class="text-brand text-3xl text-gray-800 uppercase">TheLuigi.com</h2>
-                    <p class="text-paragraph text-gray-500 text-2xl mt-4">Luigi is a web developer, located in upstate NY, who started The Fundamental Shape. Checkout his rad website!</p>
+            <a href="http://theluigi.com" target="_blank">
+                <div class="hover:shadow-2xl bg-white rounded-lg shadow mx-12 max-w-6xl mt-8 min-h-full">
+                    <img class="rounded-t-lg" src="/img/p2.png" alt="">
+                    <div class="p-5">
+                        <h2 class="text-brand text-3xl text-gray-800 uppercase">TheLuigi.com</h2>
+                        <p class="text-paragraph text-gray-500 text-2xl mt-4">Luigi is a web developer, located in upstate NY, who started The Fundamental Shape. Checkout his rad website!</p>
+                    </div>
                 </div>
-            </div>
+            </a>
 
         </div>
     </div>

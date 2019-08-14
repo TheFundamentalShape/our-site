@@ -1,16 +1,16 @@
 @tailwind base;
 @tailwind components;
 
-.bg-cactus {
-    background-color: #3C8E7E;
-}
-
 .nav-heading {
     font-family: gothic-open-shaded, sans-serif;
 }
 
 .hero {
-    background-image: url("/img/texture/vint2.png");
+    background-image: url("/img/texture/linetexture.png");
+}
+
+.hero-2 {
+    background-image: url("/img/texture/newvint.png");
 }
 
 .text-brand {

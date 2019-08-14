@@ -9,6 +9,7 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="https://use.typekit.net/ocd5rnk.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
