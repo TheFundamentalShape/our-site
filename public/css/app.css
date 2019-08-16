@@ -650,6 +650,14 @@ video {
   font-family: "American Typewriter";
 }
 
+.text-dashboard-heading {
+  font-family: "Countach";
+}
+
+.text-dashboard {
+  font-family: "Avenir Next";
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

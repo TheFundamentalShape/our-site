@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Property;
 use App\User;
 use App\Company;
 
@@ -87,7 +88,7 @@ class RegisterController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
             'company' => 'required|string',
-            'domain' => 'required|string|unique:companies',
+            'domain' => 'required|string|unique:properties',
             'phone' => 'required',
         ]);
     }
@@ -100,17 +101,19 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $company = Company::create([
-            'name' => $data['company'],
-            'domain' => $data['domain']
-        ]);
 
-        return User::create([
-            'company_id' => $company->id,
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'phone' => $data['phone'],
             'password' => Hash::make($data['password'])
         ]);
+
+        $user->properties()->create([
+            'name' => $data['company'],
+            'domain' => $data['domain']
+        ]);
+
+        return $user;
     }
 }

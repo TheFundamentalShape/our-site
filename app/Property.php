@@ -5,11 +5,13 @@ use App\User;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Company extends Model
+class Property extends Model
 {
     protected $fillable = [
         'name', 'domain'
     ];
+
+    protected $table = 'properties';
     
     public function user(){
         return $this->belongsTo(User::class);

@@ -18,5 +18,6 @@ mix.js('resources/js/app.js', 'public/js')
     ]);
 
 mix.browserSync({
-    proxy: 'fundamentalshape.test'
+    proxy: 'fundamentalshape.test',
+    notify: false
 });

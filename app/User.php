@@ -6,7 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-use App\Company;
+use App\Property;
 
 class User extends Authenticatable
 {
@@ -18,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'company_id', 'name', 'email', 'phone', 'password'
+        'name', 'email', 'phone', 'password'
     ];
 
     /**
@@ -39,7 +39,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function companies(){
-        return $this->hasMany(Company::class);
+    public function properties(){
+        return $this->hasMany(Property::class);
     }
 }

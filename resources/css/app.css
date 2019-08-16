@@ -21,4 +21,13 @@
     font-family: "American Typewriter";
 }
 
+.text-dashboard-heading {
+    font-family: "Countach";
+}
+
+.text-dashboard {
+    font-family: "Avenir Next";
+}
+
+
 @tailwind utilities;
