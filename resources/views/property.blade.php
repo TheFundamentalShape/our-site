@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="flex">
+    <div class="md:flex">
         <div class="mx-6 mt-6 mr-20">
             <dashboard-sidebar></dashboard-sidebar>
         </div>
