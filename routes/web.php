@@ -20,3 +20,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/properties/{property}', 'PropertyController@show')->name('property.show');
+Route::post('/properties/create', 'PropertyController@store')->name('property.store');
+
+Route::get('/properties/{property}/billing', 'BillingController@show')->name('billing.show');

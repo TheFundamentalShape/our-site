@@ -11,22 +11,13 @@ class UserTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    function a_user_can_have_many_unique_properties(){
-        // Arrange
+    public function a_user_can_be_an_admin()
+    {
         $user = factory(User::class)->create();
 
-        // Act
-        $user->properties()->create([
-            'name' => 'my property',
-            'domain' => 'property.com'
-        ]);
+        $user->makeAdmin();
 
-        $user->properties()->create([
-            'name' => 'my property',
-            'domain' => 'property2.com'
-        ]);
-
-        // Assert
-        $this->assertEquals(2, $user->properties()->count());
+        $this->assertEquals(1, $user->is_admin);
     }
+
 }

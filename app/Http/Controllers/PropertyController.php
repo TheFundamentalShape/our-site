@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Property;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PropertyController extends Controller
 {
@@ -35,7 +36,20 @@ class PropertyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required|string',
+            'domain' => 'required|unique:properties|url'
+        ]);
+
+        if(Property::create([
+            'user_id' => Auth::id(),
+            'name' => $request->name,
+            'domain' => $request->domain
+        ])){
+            return back();
+        }
+
+        return back();
     }
 
     /**

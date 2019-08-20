@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Property extends Model
 {
     protected $fillable = [
-        'name', 'domain'
+        'name', 'domain', 'user_id'
     ];
 
     protected $table = 'properties';

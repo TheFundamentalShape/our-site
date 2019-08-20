@@ -658,6 +658,10 @@ video {
   font-family: "Avenir Next";
 }
 
+.link-active {
+  color: #2d3748;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

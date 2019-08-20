@@ -29,5 +29,9 @@
     font-family: "Avenir Next";
 }
 
+.link-active {
+    @apply text-gray-800;
+}
+
 
 @tailwind utilities;

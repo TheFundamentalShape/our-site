@@ -42,4 +42,16 @@ class User extends Authenticatable
     public function properties(){
         return $this->hasMany(Property::class);
     }
+
+    public function createProperty($name, $domain){
+        return $this->properties()->create([
+            'name' => $name,
+            'domain' => $domain
+        ]);
+    }
+
+    public function makeAdmin()
+    {
+        $this->is_admin = 1;
+    }
 }

@@ -21,7 +21,7 @@ window.Vue = require('vue');
 
 Vue.component('navbar', require('./components/Navbar.vue').default);
 Vue.component('dashboard-navbar', require('./components/DashboardNavbar.vue').default);
-Vue.component('dashboard-sidebar', require('./components/DashboardSidebar.vue').default);
+Vue.component('new-property-form', require('./components/NewPropertyForm.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
