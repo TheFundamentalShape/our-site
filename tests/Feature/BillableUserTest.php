@@ -37,8 +37,11 @@ class RegisterPropertyTest extends TestCase
     }
 
     /** @test */
-    public function a_user_can_subscribe_to_hosting()
+    public function a_property_can_subscribe_to_hosting()
     {
-        // TODO: Subscribe a user to hosting.
+        $user = factory(User::class)->create();
+        $property = $user->createProperty('Company name', 'domain.com');
+
+
     }
 }

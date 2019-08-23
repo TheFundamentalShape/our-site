@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6a144cd-600c-4470-a962-196ec8620982" name="Default Changelist" comment="converted &quot;company&quot; model to a new &quot;property&quot; model. Also added so registration validation/logic, created a User factory, wrote a new migration for properties, added new vue components for navigation, added property view, started new PHPUnit tests. That's about it.">
-      <change afterPath="$PROJECT_DIR$/tests/Feature/BillableUserTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Property.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Property.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/billing.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/billing.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/property.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/property.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/RegisterPropertyTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/RegisterPropertyTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/UserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/UserTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/BillableUserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/BillableUserTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -136,7 +132,7 @@
         <counts>
           <entry key="css" value="39" />
           <entry key="js" value="67" />
-          <entry key="php" value="4474" />
+          <entry key="php" value="4578" />
           <entry key="txt" value="3" />
           <entry key="vue" value="1331" />
         </counts>
@@ -146,7 +142,7 @@
           <entry key="Blade" value="2058" />
           <entry key="CSS" value="39" />
           <entry key="JavaScript" value="67" />
-          <entry key="PHP" value="2416" />
+          <entry key="PHP" value="2520" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="Vue.js" value="1331" />
         </counts>
@@ -159,7 +155,7 @@
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -167,8 +163,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/Feature/BillableUserTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="39" column="53" lean-forward="true" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
+            <state relative-caret-position="223">
+              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
               <folding>
                 <element signature="e#33#52#0#PHP" expanded="true" />
                 <element signature="e#230#637#0#PHP" />
@@ -283,8 +279,8 @@
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_08_23_005412_create_bills_table.php" />
         <option value="$PROJECT_DIR$/tests/Feature/RegisterPropertyTest.php" />
-        <option value="$PROJECT_DIR$/tests/Feature/BillableUserTest.php" />
         <option value="$PROJECT_DIR$/app/Property.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/BillableUserTest.php" />
       </list>
     </option>
   </component>
@@ -395,6 +391,15 @@
       <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/moneyphp/money" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/laravel/cashier" />
+      <path value="$PROJECT_DIR$/vendor/symfony/intl" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
@@ -626,7 +631,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55531000" />
+    <option name="totallyTimeSpent" value="56180000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -639,7 +644,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1400" height="814" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19734904" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -648,7 +652,7 @@
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32953367" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3531856" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3531856" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39889196" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -657,7 +661,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32963988" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32963988" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5003647" side_tool="true" weight="0.09222798" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4996353" weight="0.21052632" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4996353" visible="true" weight="0.4196676" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.32963988" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -969,7 +973,7 @@
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1033,8 +1037,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/Feature/BillableUserTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="39" column="53" lean-forward="true" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
+        <state relative-caret-position="223">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
           <folding>
             <element signature="e#33#52#0#PHP" expanded="true" />
             <element signature="e#230#637#0#PHP" />
