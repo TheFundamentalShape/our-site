@@ -7,7 +7,7 @@
 @section('content')
     <div class="md:flex text-dashboard">
         @include('layouts.sidebar')
-        <div class="mx-6 mt-6 w-full">
+        <div class="px-6 mt-6 w-full">
             <div>
                 <h1 class="text-md font-bold text-3xl">{{ $property->name }}</h1>
                 <p class="text-gray-600 font-medium text-lg">{{ $property->domain }}</p>

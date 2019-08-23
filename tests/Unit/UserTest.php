@@ -17,7 +17,7 @@ class UserTest extends TestCase
 
         $user->makeAdmin();
 
-        $this->assertEquals(1, $user->is_admin);
+        $this->assertEquals(1, $user->fresh()->is_admin);
     }
 
 }

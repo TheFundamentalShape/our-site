@@ -25,22 +25,6 @@ class RegisterPropertyTest extends TestCase
     }
 
     /** @test */
-    public function a_user_can_register_a_property_via_an_endpoint()
-    {
-        $user = factory(User::class)->create();
-
-        $this->json('POST', '/properties/create', [
-            'name' => 'my property',
-            'domain' => 'domain.com'
-        ]);
-
-        // assert
-        $this->assertEquals(1, $user->properties->count());
-        $this->assertEquals('Company name', $user->properties->first()->name);
-        $this->assertEquals('domain.com', $user->properties->first()->domain);
-    }
-
-    /** @test */
     public function a_user_can_have_many_unique_properties(){
         // Arrange
         $user = factory(User::class)->create();

@@ -39,19 +39,29 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    /*
+     * --------------------------
+     * ELOQUENT RELATIONSHIPS
+     * --------------------------
+     */
     public function properties(){
         return $this->hasMany(Property::class);
     }
 
+    /*
+     * --------------------------
+     * CUSTOM MODEL METHODS
+     * --------------------------
+     */
     public function createProperty($name, $domain){
         return $this->properties()->create([
             'name' => $name,
             'domain' => $domain
         ]);
     }
-
     public function makeAdmin()
     {
         $this->is_admin = 1;
+        $this->save();
     }
 }
