@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6a144cd-600c-4470-a962-196ec8620982" name="Default Changelist" comment="converted &quot;company&quot; model to a new &quot;property&quot; model. Also added so registration validation/logic, created a User factory, wrote a new migration for properties, added new vue components for navigation, added property view, started new PHPUnit tests. That's about it.">
+<<<<<<< Updated upstream
       <change afterPath="$PROJECT_DIR$/app/Billing/FakePaymentGateway.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/Billing/PaymentGateway.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tests/Unit/BillTest.php" afterDir="false" />
@@ -17,6 +18,10 @@
       <change beforePath="$PROJECT_DIR$/tests/Feature/RegisterPropertyTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/RegisterPropertyTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Unit/PropertyTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/PropertyTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Unit/UserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/UserTest.php" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +31,9 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -71,6 +79,7 @@
     </expand>
     <select />
   </component>
+<<<<<<< Updated upstream
   <component name="FUSProjectUsageTrigger">
     <session id="-850527241">
       <usages-collector id="statistics.lifecycle.project">
@@ -263,6 +272,10 @@
         </entry>
       </file>
     </leaf>
+=======
+  <component name="FileEditorManager">
+    <leaf />
+>>>>>>> Stashed changes
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -328,22 +341,6 @@
         <option value="$PROJECT_DIR$/resources/views/billing.blade.php" />
       </list>
     </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
-    <package-json value="$PROJECT_DIR$/package.json" />
-  </component>
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/node_modules" />
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/package.json" />
-    </packageJsonPaths>
   </component>
   <component name="PhpServers">
     <servers />
@@ -450,10 +447,18 @@
       <path value="$PROJECT_DIR$/vendor/symfony/intl" />
     </include_path>
   </component>
+<<<<<<< Updated upstream
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1400" />
     <option name="height" value="814" />
+=======
+  <component name="ProjectFrameBounds">
+    <option name="x" value="183" />
+    <option name="y" value="90" />
+    <option name="width" value="1774" />
+    <option name="height" value="1040" />
+>>>>>>> Stashed changes
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -466,6 +471,7 @@
         <subPane>
           <expand>
             <path>
+<<<<<<< Updated upstream
               <item name="new-shape" type="b2602c69:ProjectViewProjectNode" />
               <item name="new-shape" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -542,6 +548,10 @@
               <item name="new-shape" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
               <item name="Unit" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="fundamentalshape" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fundamentalshape" type="462c0819:PsiDirectoryNode" />
+>>>>>>> Stashed changes
             </path>
           </expand>
           <select />
@@ -618,13 +628,21 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="PHPUnit.phpunit.xml" />
       <item itemvalue="PHPUnit.PropertyTest" />
+<<<<<<< Updated upstream
       <item itemvalue="PHPUnit.RegisterPropertyTest.a_user_can_register_many_unique_properties" />
       <item itemvalue="PHPUnit.RegisterPropertyTest.a_property_can_have_a_balance" />
       <item itemvalue="PHPUnit.PropertyTest.a_property_belongs_to_a_user" />
       <item itemvalue="PHPUnit.RegisterPropertyTest.a_property_can_pay_a_balance_in_full" />
       <item itemvalue="PHPUnit.BillTest.a_bill_can_be_payed" />
+=======
+      <item itemvalue="PHPUnit.phpunit.xml" />
+      <item itemvalue="PHPUnit.RegisterPropertyTest" />
+      <item itemvalue="PHPUnit.RegisterPropertyTest.a_property_can_be_billed_for_many_services" />
+      <item itemvalue="PHPUnit.RegisterPropertyTest.a_property_can_have_a_balance" />
+      <item itemvalue="PHPUnit.RegisterPropertyTest.a_user_can_have_many_unique_properties" />
+      <item itemvalue="PHPUnit.RegisterPropertyTest.a_user_can_register_a_property_via_an_endpoint" />
+>>>>>>> Stashed changes
     </list>
     <recent_temporary>
       <list>
@@ -650,6 +668,7 @@
       <workItem from="1565839772254" duration="9956000" />
       <workItem from="1566010046497" duration="4150000" />
       <workItem from="1566262757372" duration="16110000" />
+      <workItem from="1566533973437" duration="1820000" />
     </task>
     <servers />
   </component>
@@ -686,7 +705,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="73237000" />
+=======
+    <option name="totallyTimeSpent" value="59668000" />
+>>>>>>> Stashed changes
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -698,14 +721,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< Updated upstream
     <frame x="0" y="23" width="1440" height="808" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19170243" />
+=======
+    <frame x="183" y="90" width="1774" height="1040" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18244803" />
+>>>>>>> Stashed changes
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32953367" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35055867" />
@@ -716,9 +744,16 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32963988" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32963988" />
+<<<<<<< Updated upstream
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007153" side_tool="true" weight="0.32963988" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.75536484" weight="0.23822714" />
       <window_info anchor="bottom" id="Database Console" order="12" sideWeight="0.49928468" weight="0.32963988" />
+=======
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5003647" side_tool="true" weight="0.09222798" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4996353" visible="true" weight="0.20991561" />
+      <window_info anchor="bottom" id="Database Console" order="12" weight="0.32963988" />
+      <window_info anchor="bottom" id="Messages" order="13" />
+>>>>>>> Stashed changes
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -749,9 +784,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -815,6 +847,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ee6aa7ef-f137-41e6-bafc-24baebaf1572/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -824,6 +857,18 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a913e91d-6298-45b0-b903-9f17bc7dbab6/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+=======
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ee6aa7ef-f137-41e6-bafc-24baebaf1572/console.sql" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ee6aa7ef-f137-41e6-bafc-24baebaf1572/console_1.sql" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a913e91d-6298-45b0-b903-9f17bc7dbab6/console.sql" />
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -838,6 +883,16 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
+=======
+    <entry file="das://ee6aa7ef-f137-41e6-bafc-24baebaf1572/schema/new_fundamental/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> Stashed changes
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core_c.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2135">
@@ -925,6 +980,7 @@
     <entry file="file://$PROJECT_DIR$/.gitattributes">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/resources/views/property.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -933,6 +989,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.env">
+=======
+    <entry file="file://$PROJECT_DIR$/resources/views/billing.blade.php">
+>>>>>>> Stashed changes
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
           <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
@@ -996,6 +1055,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BillingController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
@@ -1006,6 +1066,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/tests/Feature/RegisterPropertyTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
@@ -1125,6 +1187,23 @@
           <caret line="43" column="67" selection-start-line="43" selection-start-column="67" selection-end-line="43" selection-end-column="67" />
           <folding>
             <element signature="e#740#1296#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="24" column="86" selection-start-line="24" selection-start-column="86" selection-end-line="24" selection-end-column="86" />
+          <folding>
+            <element signature="e#7#389#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
