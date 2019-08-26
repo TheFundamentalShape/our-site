@@ -7,37 +7,15 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 use App\Property;
+use Laravel\Cashier\Billable;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, Billable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email', 'phone', 'password'
-    ];
-
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
-
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    protected $fillable = ['name', 'email', 'phone', 'password'];
+    protected $hidden = ['password', 'remember_token'];
+    protected $casts = ['email_verified_at' => 'datetime'];
 
     /*
      * --------------------------
@@ -53,11 +31,14 @@ class User extends Authenticatable
      * CUSTOM MODEL METHODS
      * --------------------------
      */
-    public function createProperty($name, $domain){
-        return $this->properties()->create([
+    public function createProperty($name, $domain)
+    {
+        $property = $this->properties()->create([
             'name' => $name,
             'domain' => $domain
         ]);
+
+        return $property;
     }
     public function makeAdmin()
     {

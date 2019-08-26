@@ -6,21 +6,33 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use App\User;
 
+use App\Billing\FakePaymentGateway;
+
 class RegisterPropertyTest extends TestCase
 {
     use RefreshDatabase;
 
-    /** @test */
-    public function a_property_can_be_billed_for_many_services()
-    {
-        $user = factory(User::class)->create();
-        $property = $user->createProperty('Company name', 'domain.com');
+    private $paymentGateway;
 
-        $bill1 = $property->bill('Bill description', 'lorem...', 50000);
-        $bill2 = $property->bill('Bill 2 description', 'more lorem...', 10000);
+    public function setUp(): void
+    {
+        parent::setUp();
+        $this->paymentGateway = new FakePaymentGateway();
+    }
+
+    /** @test */
+    public function a_property_can_pay_a_balance_in_full()
+    {
+        // arrange
+        $user = factory(User::class)->create();
+        $property = $user->createProperty('My Property', 'property.com');
+        $property->createBill('a test bill', 'a description for the bill', 50000);
+
+        // act
+        $property->payTotalBalance($this->paymentGateway->getToken());
 
         // assert
-        $this->assertEquals(2, $user->properties()->first()->bills()->count());
+        $this->assertEquals(0, $user->properties()->first()->getTotalBalance());
     }
 
     /** @test */
@@ -29,19 +41,10 @@ class RegisterPropertyTest extends TestCase
         $user = factory(User::class)->create();
         $property = $user->createProperty('Company name', 'domain.com');
 
-        $bill1 = $property->bill('Bill description', 'lorem...', 50000);
-        $bill2 = $property->bill('Bill 2 description', 'more lorem...', 10000);
+        $property->createBill('Bill description', 'lorem...', 50000);
+        $property->createBill('Bill 2 description', 'more lorem...', 10000);
 
         // assert
         $this->assertEquals(50000 + 10000, $property->getTotalBalance());
-    }
-
-    /** @test */
-    public function a_property_can_subscribe_to_hosting()
-    {
-        $user = factory(User::class)->create();
-        $property = $user->createProperty('Company name', 'domain.com');
-
-
     }
 }

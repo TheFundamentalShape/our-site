@@ -20,4 +20,17 @@ class UserTest extends TestCase
         $this->assertEquals(1, $user->fresh()->is_admin);
     }
 
+    /** @test */
+    public function a_user_can_register_a_property()
+    {
+        $user = factory(User::class)->create();
+
+        $user->createProperty('Company name', 'domain.com');
+
+        // assert
+        $this->assertEquals(1, $user->properties->count());
+        $this->assertEquals('Company name', $user->properties->first()->name);
+        $this->assertEquals('domain.com', $user->properties->first()->domain);
+    }
+
 }

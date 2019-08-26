@@ -8,46 +8,19 @@ use Illuminate\Support\Facades\Auth;
 
 class PropertyController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function __construct()
     {
-        //
+        return $this->middleware('auth');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        $this->validate($request, [
+        $this->validate(request(), [
             'name' => 'required|string',
-            'domain' => 'required|unique:properties|url'
+            'domain' => 'required|unique:properties'
         ]);
 
-        if(Property::create([
-            'user_id' => Auth::id(),
-            'name' => $request->name,
-            'domain' => $request->domain
-        ])){
-            return back();
-        }
+        Auth::user()->createProperty($request->name, $request->domain);
 
         return back();
     }

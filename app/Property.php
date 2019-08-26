@@ -9,12 +9,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Property extends Model
 {
-    protected $fillable = [
-        'name', 'domain', 'user_id'
-    ];
-
+    protected $fillable = ['name', 'domain', 'user_id'];
     protected $table = 'properties';
-    private $totalBalance;
 
     /*
      * --------------------------
@@ -28,26 +24,27 @@ class Property extends Model
         return $this->hasMany(Bill::class);
     }
 
-
     /*
      * --------------------------
      * CUSTOM MODEL METHODS
      * --------------------------
      */
-    public function bill($title, $description, $price, $status='in-progress')
+    public function createBill($title, $description, $price)
     {
-        $this->totalBalance += $price;
-
         return $this->bills()->create([
             'title' => $title,
             'description' => $description,
-            'price' => $price,
-            'state' => $status
+            'price' => $price
         ]);
     }
-
     public function getTotalBalance()
     {
-        return $this->totalBalance;
+        return $this->bills->sum('price');
+    }
+    public function payFullBalance()
+    {
+        foreach($this->bills() as $bill){
+            $bill->pay();
+        }
     }
 }

@@ -19,7 +19,6 @@ class CreateBillsTable extends Migration
             $table->string('title');
             $table->string('description');
             $table->integer('price');
-            $table->string('state');
             $table->timestamps();
         });
     }
