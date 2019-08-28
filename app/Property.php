@@ -43,7 +43,10 @@ class Property extends Model
     {
         return $this->bills->sum('price');
     }
-
+    public function getTotalBalanceFormatted()
+    {
+        return number_format(($this->bills->sum('price') / 100), 2, '.', ' ');
+    }
     public function paySingleBill(Bill $bill, PaymentGateway $paymentGateway)
     {
         $paymentGateway->pay($bill);
