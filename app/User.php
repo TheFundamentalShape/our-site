@@ -7,11 +7,10 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 use App\Property;
-use Laravel\Cashier\Billable;
 
 class User extends Authenticatable
 {
-    use Notifiable, Billable;
+    use Notifiable;
 
     protected $fillable = ['name', 'email', 'phone', 'password'];
     protected $hidden = ['password', 'remember_token'];

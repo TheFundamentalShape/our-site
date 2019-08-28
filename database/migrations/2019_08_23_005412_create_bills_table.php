@@ -19,6 +19,7 @@ class CreateBillsTable extends Migration
             $table->string('title');
             $table->string('description');
             $table->integer('price');
+            $table->dateTime('paid_at')->nullable();
             $table->timestamps();
         });
     }

@@ -2,7 +2,9 @@
 
 namespace App\Billing;
 
+use App\Bill;
+
 interface PaymentGateway
 {
-    public function getToken();
+    public function pay(Bill $bill);
 }

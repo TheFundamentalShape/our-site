@@ -2,9 +2,11 @@
 
 namespace App;
 
-use App\User;
 use App\Bill;
+use App\Billing\PaymentGateway;
+use App\User;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Property extends Model
@@ -41,10 +43,18 @@ class Property extends Model
     {
         return $this->bills->sum('price');
     }
-    public function payFullBalance()
+
+    public function paySingleBill(Bill $bill, PaymentGateway $paymentGateway)
     {
-        foreach($this->bills() as $bill){
-            $bill->pay();
-        }
+        $paymentGateway->pay($bill);
+    }
+    public function payTotalBalance(PaymentGateway $paymentGateway)
+    {
+        // create a consolidation bill where all bills are condensed to
+        $totalBill = $this->createBill('Consolidated bill', 'This is a consolidation of all your individual bills, into a single bill.', $this->getTotalBalance());
+        $this->paySingleBill($totalBill, $paymentGateway);
+
+        // mark all of the bills as 'paid_at' for Carbon::now()
+        $this->bills()->unpaid()->update(['paid_at' => Carbon::now(), 'price' => 0]);
     }
 }
