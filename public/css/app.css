@@ -662,6 +662,12 @@ video {
   color: #2d3748;
 }
 
+.paid-banner {
+  font-family: 'Pastdue';
+  color: #a92a25;
+  transform: rotate(-10deg);
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

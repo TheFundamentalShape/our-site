@@ -16,14 +16,15 @@
 
         <h2 class="text-2xl font-bold my-8">Past Bills</h2>
 
-        <div class="mb-4">
+        <div class="mb-8">
             <div class="bg-white rounded p-4">
                 <div class="flex justify-between">
                     <h1 class="text-2xl">Test Bill</h1>
                     <span class="inline-block bg-cool-green text-white px-3 py-2 rounded-full">$97.00</span>
                 </div>
 
-                <p class="text-gray-600 mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p class="text-gray-600 mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p class="paid-banner ml-20 text-6xl absolute -mt-20">PAID</p>
             </div>
         </div>
 
@@ -34,7 +35,8 @@
                     <span class="inline-block bg-cool-green text-white px-3 py-2 rounded-full">$97.00</span>
                 </div>
 
-                <p class="text-gray-600 mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p class="text-gray-600 mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p class="paid-banner ml-20 text-6xl absolute -mt-20">PAID</p>
             </div>
         </div>
     </div>
