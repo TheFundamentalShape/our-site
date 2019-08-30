@@ -30,5 +30,15 @@ Vue.component('new-property-form', require('./components/NewPropertyForm.vue').d
  */
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    data() {
+        return {
+            mobileNavOpen: false,
+        };
+    },
+    methods: {
+        openNav() {
+            this.mobileNavOpen = !this.mobileNavOpen;
+        }
+    }
 });

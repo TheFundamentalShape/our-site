@@ -1,52 +1,42 @@
-@extends('layouts.app')
+@extends('layouts.property.app')
 
 @section('title')
     Billing
 @endsection
 
 @section('content')
-    <div class="md:flex text-dashboard">
-
-        @include('layouts.sidebar')
-
-        <div class="mt-6 w-full px-4">
-            <div>
-                <h1 class="text-md font-bold text-3xl">{{ $property->name }}</h1>
-                <p class="text-gray-600 font-medium text-lg">{{ $property->domain }}</p>
-                <a class="inline-block bg-cool-green rounded shadow px-3 py-2 mt-2 font-semibold text-white hover:text-cool-green hover:bg-white">Visit your Slack workspace</a>
+    <div class="lg:max-w-6xl">
+        <h2 class="text-2xl font-bold my-4">Current Bills</h2>
+        @if($property->bills()->count() < 1)
+            <div class="bg-cool-green rounded p-4 text-white">
+                <h1 class="text-2xl text-dashboard font-bold">Woohoo!</h1>
+                <p class="font-light">You have no unpaid bills! What a great feeling!</p>
             </div>
+        @endif
 
-            @if($property->bills()->count() > 0)
+        <h2 class="text-2xl font-bold my-8">Past Bills</h2>
 
-                <div class="my-6">
-                    <h2 class="font-normal text-4xl my-4">Here are the invoices for this property.</h2>
-
-                    <div class="bg-white shadow rounded p-4 my-4">
-                        <div class="flex justify-between">
-                            <div>
-                                <h1 class="text-3xl">Add blogging platform</h1>
-                                <p>Bill sent 8/19/2019</p><span class="mt-2 inline-block bg-cool-green rounded-full text-white px-3 py-1 font-medium">Complete</span>
-                            </div>
-
-                            <div>
-                                <h1>$97.00</h1>
-                            </div>
-                        </div>
-                    </div>
+        <div class="mb-4">
+            <div class="bg-white rounded p-4">
+                <div class="flex justify-between">
+                    <h1 class="text-2xl">Test Bill</h1>
+                    <span class="inline-block bg-cool-green text-white px-3 py-2 rounded-full">$97.00</span>
                 </div>
 
-                <div class="my-6">
-                    <h2 class="font-normal text-2xl my-1">Your total owed:</h2>
-                    <h1 class="font-normal text-4xl my-1">$97.00</h1>
+                <p class="text-gray-600 mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <div class="bg-white rounded p-4">
+                <div class="flex justify-between">
+                    <h1 class="text-2xl">Test Bill</h1>
+                    <span class="inline-block bg-cool-green text-white px-3 py-2 rounded-full">$97.00</span>
                 </div>
 
-            @else
-                <div class="my-6 p-4 bg-white w-full rounded shadow">
-                    <p class="font-bold text-lg">Way to go!</p>
-                    <p class="text-gray-500">You have no bills to pay!</p>
-                </div>
-            @endif
-
+                <p class="text-gray-600 mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
         </div>
     </div>
+
 @endsection

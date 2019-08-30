@@ -23,3 +23,11 @@ Route::get('/properties/{property}', 'PropertyController@show')->name('property.
 Route::post('/properties/create', 'PropertyController@store')->name('property.store');
 
 Route::get('/properties/{property}/billing', 'BillingController@show')->name('billing.show');
+
+/*
+ * --------------
+ * ADMIN ROUTES
+ * --------------
+ */
+
+Route::get('/admin', function(){})->middleware('admin');

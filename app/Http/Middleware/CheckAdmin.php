@@ -16,9 +16,11 @@ class CheckAdmin
      */
     public function handle($request, Closure $next)
     {
-        if(Auth::user()->is_admin == 1)
-            return $next($request);
+        if(Auth::check()) {
+            if (Auth::user()->is_admin == 1)
+                return $next($request);
+        }
 
-        return redirect('login');
+        return response('Get outta here chief. This area is not meant for you.', 403);
     }
 }

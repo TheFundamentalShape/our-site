@@ -33,4 +33,26 @@ class UserTest extends TestCase
         $this->assertEquals('domain.com', $user->properties->first()->domain);
     }
 
+    /** @test */
+    public function a_user_that_is_NOT_admin_can_NOT_visit_admin_dashboard()
+    {
+        $user = factory(User::class)->create();
+        $this->actingAs($user);
+
+        $response = $this->get('/admin');
+
+        $response->assertStatus(403);
+    }
+
+    /** @test */
+    public function a_user_that_is_admin_can_visit_admin_dashboard()
+    {
+        $user = factory(User::class)->state('admin')->create();
+        $this->actingAs($user);
+
+        $response = $this->get('/admin');
+
+        $response->assertStatus(200);
+    }
+
 }

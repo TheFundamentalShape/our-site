@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/css/app.css">
     <script src="https://kit.fontawesome.com/825a6bb202.js"></script>
 </head>
-<body class="bg-gray-300 text-gray-800 font-dashboard">
+<body class="bg-gray-200 text-gray-800 font-dashboard">
 
 <div id="app">
     <dashboard-navbar></dashboard-navbar>
