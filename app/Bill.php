@@ -28,13 +28,19 @@ class Bill extends Model
         return $query->whereNull('paid_at');
     }
 
+    public function scopePaid($query)
+    {
+        return $query->whereNotNull('paid_at');
+    }
+
     /*
      * --------------------------
      * CUSTOM MODEL METHODS
      * --------------------------
      */
 
-    public function pay(){
-        //
+    public function getBillPriceFormatted()
+    {
+        return number_format(($this->price / 100), 2, '.', ' ');
     }
 }
