@@ -54,7 +54,7 @@ class Property extends Model
     public function payTotalBalance(PaymentGateway $paymentGateway)
     {
         // create a consolidation bill where all bills are condensed to
-        $totalBill = $this->createBill('Consolidated bill', 'This is a consolidation of all your individual bills, into a single bill.', $this->getTotalBalance());
+        $totalBill = $this->createBill('Consolidated bill', 'This is a consolidation of all your individual bills, into a single bill for you to pay all at once.', $this->getTotalBalance());
         $this->paySingleBill($totalBill, $paymentGateway);
 
         // mark all of the bills as 'paid_at' for Carbon::now()
