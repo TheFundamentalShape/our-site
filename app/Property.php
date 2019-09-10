@@ -39,14 +39,16 @@ class Property extends Model
             'price' => $price
         ]);
     }
+
     public function getTotalBalance()
     {
-        return $this->bills->sum('price');
+        return $this->bills()->unpaid()->sum('price');
     }
     public function getTotalBalanceFormatted()
     {
-        return number_format(($this->bills->sum('price') / 100), 2, '.', ' ');
+        return number_format(($this->bills()->unpaid()->sum('price') / 100), 2, '.', ',');
     }
+
     public function paySingleBill(Bill $bill, PaymentGateway $paymentGateway)
     {
         $paymentGateway->pay($bill);

@@ -22,7 +22,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/properties/{property}', 'PropertyController@show')->name('property.show');
 Route::post('/properties/create', 'PropertyController@store')->name('property.store');
 
-Route::get('/properties/{property}/billing', 'BillingController@show')->name('billing.show');
+Route::get('/properties/{property}/billing', 'BillController@show')->name('billing.show');
+
+Route::post('/properties/{property}/pay/full', 'BillingController@payFullBalance');
+Route::post('/properties/{property}/pay/bill/{bill}', 'BillingController@paySingleBill');
 
 /*
  * --------------

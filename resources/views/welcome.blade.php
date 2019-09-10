@@ -80,7 +80,7 @@
     </div>
 
     <div class="mt-20 mb-24">
-        <h3 class="text-center text-brand text-gray-500 text-2xl">Your site could be on here too! 🎉</h3>
+        <h3 class="text-center text-brand text-gray-600 text-2xl">Your site could be on here too! 🎉</h3>
     </div>
 
     <div class="bg-gray-800">

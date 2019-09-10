@@ -41,6 +41,6 @@ class Bill extends Model
 
     public function getBillPriceFormatted()
     {
-        return number_format(($this->price / 100), 2, '.', ' ');
+        return number_format(($this->price / 100), 2, '.', ',');
     }
 }
