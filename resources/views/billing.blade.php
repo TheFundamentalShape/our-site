@@ -13,7 +13,7 @@
                 <p class="font-light">You have no unpaid bills! What a great feeling!</p>
             </div>
         @else
-            @foreach($property->bills()->unpaid()->get() as $bill)
+            @foreach($property->getUnpaidBills() as $bill)
                 <div class="mb-8">
                     <div class="bg-white rounded p-4">
                         <div class="flex justify-between">
@@ -30,7 +30,7 @@
             <p class="text-2xl">${{ $property->getTotalBalanceFormatted() }}</p>
         @endif
 
-        <h2 class="text-2xl font-bold my-8">Past Bills</h2>
+        <h2 class="text-2xl font-bold my-4">Past Bills</h2>
 
         @if($property->bills()->paid()->count() < 1)
             <div class="bg-cool-green rounded p-4 text-white">

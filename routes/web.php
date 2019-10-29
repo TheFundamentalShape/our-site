@@ -33,4 +33,4 @@ Route::post('/properties/{property}/pay/bill/{bill}', 'BillingController@paySing
  * --------------
  */
 
-Route::get('/admin', function(){})->middleware('admin');
+Route::get('/admin', 'AdminPageController@index')->middleware('admin');

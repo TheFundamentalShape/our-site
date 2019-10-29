@@ -40,6 +40,11 @@ class Property extends Model
         ]);
     }
 
+    public function getUnpaidBills()
+    {
+        return $this->bills->unpaid;
+    }
+
     public function getTotalBalance()
     {
         return $this->bills()->unpaid()->sum('price');

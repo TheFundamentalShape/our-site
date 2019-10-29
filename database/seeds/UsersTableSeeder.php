@@ -15,7 +15,7 @@ class UsersTableSeeder extends Seeder
             'id' => 1,
             'name' => 'Luigi Battaglioli',
             'email' => 'luigi@fundamentalshape.com',
-            'password' => bcrypt('snickers123'),
+            'password' => bcrypt('password'),
             'phone' => '5188013736',
         ]);
 

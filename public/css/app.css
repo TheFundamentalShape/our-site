@@ -643,7 +643,9 @@ video {
 }
 
 .text-brand {
-  font-family: "Indigo Regular";
+  font-family: lust, serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .text-paragraph {
