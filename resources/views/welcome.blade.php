@@ -31,7 +31,7 @@
         <div class="md:mt-16 md:flex justify-between">
             <div class="md:mx-4 mt-16 md:mt-0">
                 <h2 class="text-brand text-center text-3xl lg:text-5xl text-gray-800">The latest and greatest tech, just for you.</h2>
-                <p class="text-lg lg:text-2xl text-gray-600 text-paragraph text-center">We use modern technologies to build you the best website possible. We use tools like Laravel, Statamic, and Vue JS to craft the perfect site for you!</p>
+                <p class="text-lg lg:text-2xl text-gray-600 text-paragraph text-center">We use modern technologies to build you the best website possible. We use tools like <a href="https://laravel.com" target="_blank" class="font-bold hover:underline">Laravel</a>, <a href="https://statamic.com" target="_blank" class="font-bold hover:underline">Statamic</a>, <a href="https://tailwindcss.com" target="_blank" class="font-bold hover:underline">Tailwind CSS</a>, and <a href="https://vuejs.org" target="_blank" class="font-bold hover:underline">Vue.js</a> to craft the perfect site for you!</p>
             </div>
             <div class="md:mx-4 mt-16 md:mt-0">
                 <h2 class="text-brand text-center text-3xl lg:text-5xl text-gray-800">Reliable hosting for your fancy new design.</h2>
