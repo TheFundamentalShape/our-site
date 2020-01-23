@@ -30,14 +30,9 @@
             <p class="text-2xl">${{ $property->getTotalBalanceFormatted() }}</p>
         @endif
 
-        <h2 class="text-2xl font-bold my-4">Past Bills</h2>
+        @if($property->bills()->paid()->count() > 0)
+            <h2 class="text-2xl font-bold my-4">Past Bills</h2>
 
-        @if($property->bills()->paid()->count() < 1)
-            <div class="bg-cool-green rounded p-4 text-white">
-                <h1 class="text-2xl text-dashboard font-bold">Woohoo!</h1>
-                <p class="font-light">You haven't had to pay us yet! What a great feeling!</p>
-            </div>
-        @else
             @foreach($property->bills()->paid()->get() as $bill)
                 <div class="mb-8">
                     <div class="bg-white rounded p-4">
